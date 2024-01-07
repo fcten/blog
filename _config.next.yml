@@ -43,7 +43,7 @@ custom_file_path:
 scheme: Gemini
 
 # Dark Mode
-darkmode: true
+darkmode: false
 
 
 # ---------------------------------------------------------------
@@ -141,9 +141,9 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: #/images/avatar.gif
+  url: /images/avatar_256x256.webp
   # If true, the avatar will be displayed in circle.
-  rounded: false
+  rounded: true
   # If true, the avatar will be rotated with the cursor.
   rotated: false
 
@@ -208,18 +208,18 @@ footer:
   # Icon between year and copyright info.
   icon:
     # Icon name in Font Awesome. See: https://fontawesome.com/icons
-    name: fa fa-heart
+    name: fa fa-earth-asia
     # If you want to animate the icon, set it to true.
     animated: false
     # Change the color of icon, using Hex Code.
-    color: "#ff0000"
+    color: "#39AECF"
 
   # If not defined, `author` from Hexo `_config.yml` will be used.
   # Set to `false` to disable the copyright statement.
   copyright:
 
   # Powered by Hexo & NexT
-  powered: true
+  powered: false
 
   # Beian ICP and gongan information for Chinese users. See: https://beian.miit.gov.cn, https://beian.mps.gov.cn
   beian:
@@ -624,7 +624,7 @@ quicklink:
 # Use Animate.css to animate everything.
 # For more information: https://animate.style
 motion:
-  enable: true
+  enable: false
   async: false
   transition:
     # All available transition variants: https://theme-next.js.org/animate/
