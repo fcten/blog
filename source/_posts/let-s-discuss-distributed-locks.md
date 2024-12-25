@@ -1,5 +1,5 @@
 ---
-title: let's discuss distributed locks
+title: 聊一聊分布式锁
 date: 2024-12-25 15:35:27
 tags:
 - 面试
