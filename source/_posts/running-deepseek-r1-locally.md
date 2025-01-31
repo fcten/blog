@@ -1,5 +1,5 @@
 ---
-title: running deepseek-r1 locally
+title: 6000 美元本地运行 671B 完整版 Deepseek-R1
 date: 2025-01-31 12:25:56
 tags:
 - AI
