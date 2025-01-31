@@ -11,7 +11,7 @@ categories:
 
 > 本方案由 DeepSeek R1 翻译并总结自 [Matthew Carrigan](https://x.com/carrigmat/status/1884244369907278106)
 
-完整的硬件加软件配置，用于本地运行 Deepseek-R1。实际模型，无蒸馏，Q8 量化以实现全质量。总成本，6000 美元。所有下载和零件链接如下：
+本地运行 Deepseek-R1 的完整硬件 + 软件设置。运行完整的 671B 模型（Q8量化）而非蒸馏模型。总成本约 6000 美元。
 
 <!--more-->
 
