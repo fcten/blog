@@ -29,7 +29,7 @@ categories:
 
 注：计算卡均为被动散热，非服务器风道环境使用需要改散热
 
-| | GeForce RTX 3050 6 GB | RTX A1000 | RTX A2000 | RTX 2000 Ada ｜ RTX 4000 SFF Ada ｜ RTX PRO 2000 | RTX PRO 4000 SFF |
+| | GeForce RTX 3050 6 GB | RTX A1000 | RTX A2000 | RTX 2000 Ada | RTX 4000 SFF Ada | RTX PRO 2000 | RTX PRO 4000 SFF |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 类型 | 游戏卡 | 专业卡 | 专业卡 | 专业卡 | 专业卡 | 专业卡 | 专业卡 |
 | 架构 | Ampere | Ampere | Ampere | Ada Lovelace | Ada Lovelace | Blackwell | Blackwell |
@@ -55,8 +55,8 @@ categories:
 
 ## Intel
 
-| 指标 | Arc A380 | Arc Pro A50 | Arc Pro B50 |
-| --- |
+| | Arc A380 | Arc Pro A50 | Arc Pro B50 |
+| --- | --- | --- | --- |
 | 类型 | 游戏卡 | 专业卡 | 专业卡 |
 | 架构 | Xe | Xe | Xe2 |
 | 工艺制程 | TSMC 6nm | TSMC 6nm | TSMC 5nm |
