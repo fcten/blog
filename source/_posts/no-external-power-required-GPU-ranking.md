@@ -29,16 +29,27 @@ categories:
 
 注：计算卡均为被动散热，非服务器风道环境使用需要改散热
 
-| | GeForce RTX 3050 6 GB | RTX A1000 | RTX A2000 | RTX 2000 Ada | RTX 4000 SFF Ada | RTX PRO 2000 | RTX PRO 4000 SFF |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| 类型 | 游戏卡 | 专业卡 | 专业卡 | 专业卡 | 专业卡 | 专业卡 | 专业卡 |
-| 架构 | Ampere | Ampere | Ampere | Ada Lovelace | Ada Lovelace | Blackwell | Blackwell |
-| 工艺制程 | Samsung 8nm | Samsung 8nm | Samsung 8nm | TSMC 5nm | TSMC 5nm | TSMC 5nm | TSMC 5nm |
-| 显存容量 | 6 GB | 8 GB | 6 GB / 12 GB | 16 GB | 20 GB | 16 GB | 24 GB |
-| 显存带宽 | 168.0 GB/s | 192.0 GB/s | 288.0 GB/s | 256.0 GB/s | 280.0 GB/s | 288.0 GB/s | 432.0 GB/s |
-| TDP | 75 W | 50 W | 70 W | 70 W | 70 W | 70 W | 70 W |
-| FP16 | 6.774 TFLOPS | 6.737 TFLOPS | 7.987 TFLOPS | 12.00 TFLOPS | 19.17 TFLOPS | 17.03 TFLOPS | 25.66 TFLOPS |
-| 参考售价 | ￥1,000 | ￥2,400 | ￥3,600 / ￥4,500 | ￥4,000 | ￥7,000 | ￥4,500 | ￥9,800 |
+|  | GeForce RTX 3050 6 GB | RTX A1000 | RTX A2000 |
+| --- | --- | --- | --- |
+| 类型 | 游戏卡 | 专业卡 | 专业卡 |
+| 架构 | Ampere | Ampere | Ampere |
+| 工艺制程 | Samsung 8nm | Samsung 8nm | Samsung 8nm |
+| 显存容量 | 6 GB | 8 GB | 6 GB / 12 GB |
+| 显存带宽 | 168.0 GB/s | 192.0 GB/s | 288.0 GB/s |
+| TDP | 75 W | 50 W | 70 W |
+| FP16 | 6.774 TFLOPS | 6.737 TFLOPS | 7.987 TFLOPS |
+| 参考售价 | ￥1,000 | ￥2,400 | ￥3,600 / ￥4,500 |
+
+|  | RTX 2000 Ada | RTX 4000 SFF Ada | RTX PRO 2000 | RTX PRO 4000 SFF |
+| --- | --- | --- | --- | --- |
+| 类型 | 专业卡 | 专业卡 | 专业卡 | 专业卡 |
+| 架构 | Ada Lovelace | Ada Lovelace | Blackwell | Blackwell |
+| 工艺制程 | TSMC 5nm | TSMC 5nm | TSMC 5nm | TSMC 5nm |
+| 显存容量 | 16 GB | 20 GB | 16 GB | 24 GB |
+| 显存带宽 | 256.0 GB/s | 280.0 GB/s | 288.0 GB/s | 432.0 GB/s |
+| TDP | 70 W | 70 W | 70 W | 70 W |
+| FP16 | 12.00 TFLOPS | 19.17 TFLOPS | 17.03 TFLOPS | 25.66 TFLOPS |
+| 参考售价 | ￥4,000 | ￥7,000 | ￥4,500 | ￥9,800 |
 
 ## AMD
 
