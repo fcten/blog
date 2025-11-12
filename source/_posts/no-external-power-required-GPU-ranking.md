@@ -12,10 +12,12 @@ categories:
 - 未考虑移动端芯片魔改卡
 - 数据来源：techpowerup
 
+<!--more-->
+
 ## Nvidia
 
 | | P4 | T4 | A2 | L4 |
-| --- |
+| --- | --- | --- | --- | --- |
 | 类型 | 计算卡 | 计算卡 | 计算卡 | 计算卡 |
 | 架构 | Pascal | Turing | Ampere | Ada Lovelace |
 | 工艺制程 | TSMC 16nm | TSMC 12nm | Samsung 8nm | TSMC 5nm |
@@ -28,7 +30,7 @@ categories:
 注：计算卡均为被动散热，非服务器风道环境使用需要改散热
 
 | | GeForce RTX 3050 6 GB | RTX A1000 | RTX A2000 | RTX 2000 Ada ｜ RTX 4000 SFF Ada ｜ RTX PRO 2000 | RTX PRO 4000 SFF |
-| --- |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | 类型 | 游戏卡 | 专业卡 | 专业卡 | 专业卡 | 专业卡 | 专业卡 | 专业卡 |
 | 架构 | Ampere | Ampere | Ampere | Ada Lovelace | Ada Lovelace | Blackwell | Blackwell |
 | 工艺制程 | Samsung 8nm | Samsung 8nm | Samsung 8nm | TSMC 5nm | TSMC 5nm | TSMC 5nm | TSMC 5nm |
@@ -41,7 +43,7 @@ categories:
 ## AMD
 
 | | Radeon Pro W7500 |
-| --- |
+| --- | --- |
 | 类型 | 专业卡 |
 | 架构 | RDNA 3.0 |
 | 工艺制程 | TSMC 6nm |
