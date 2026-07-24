@@ -237,17 +237,25 @@ a:hover {
 }
 
 .post-list-item {
+  display: flex;
+  align-items: baseline;
+  column-gap: 0.75rem;
   padding: 0.6rem 0;
   border-bottom: 1px dashed var(--border);
 }
 
 .post-list-item:last-child { border-bottom: none; }
 
+.post-entry {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
 .post-date {
+  display: block;
+  margin-top: 0.1rem;
   color: var(--muted);
   font-size: 0.82rem;
-  margin: 0 0.75rem;
-  white-space: nowrap;
 }
 
 .post-link {
@@ -258,7 +266,7 @@ a:hover {
 .post-link:hover { color: var(--accent); }
 
 .post-excerpt {
-  margin: 0.25rem 0 0 2.6rem;
+  margin: 0.25rem 0 0;
   color: var(--muted);
   font-size: 0.85rem;
 }
@@ -744,8 +752,6 @@ figure.highlight .marked {
   .term-main { padding: 0 1.25rem 1.5rem; }
   .term-panel { padding: 1rem; }
   .term-panel-head { margin: -1rem -1rem 1rem; padding: 0.4rem 1rem; }
-  .post-excerpt { margin-left: 0; }
-  .post-date { display: block; margin: 0 0 0.1rem 1.2rem; }
 }
 
 /* ---------- 打印 ---------- */
