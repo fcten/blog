@@ -358,6 +358,13 @@ a:hover {
   line-height: 1.4;
 }
 
+.article-content h1 { font-size: 1.5rem; }
+.article-content h2 { font-size: 1.3rem; }
+.article-content h3 { font-size: 1.15rem; }
+.article-content h4 { font-size: 1.05rem; }
+.article-content h5 { font-size: 0.98rem; }
+.article-content h6 { font-size: 0.92rem; }
+
 .article-content h2::before { content: "## "; color: var(--accent); }
 .article-content h3::before { content: "### "; color: var(--accent); }
 .article-content h4::before { content: "#### "; color: var(--accent); }
