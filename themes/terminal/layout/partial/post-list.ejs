@@ -1,0 +1,12 @@
+<ul class="post-list">
+  <% posts.each(function (post) { %>
+    <li class="post-list-item">
+      <span class="term-prompt">$</span>
+      <time class="post-date" datetime="<%= date_xml(post.date) %>"><%= date(post.date, config.date_format) %></time>
+      <a class="post-link" href="<%= url_for(post.path) %>"><%= post.title %></a>
+      <% if (theme.excerpt_length > 0 && post.excerpt) { %>
+        <p class="post-excerpt"><%= truncate(strip_html(post.excerpt), { length: theme.excerpt_length }) %></p>
+      <% } %>
+    </li>
+  <% }) %>
+</ul>

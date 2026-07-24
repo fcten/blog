@@ -1,0 +1,32 @@
+<article class="term-panel term-article">
+  <div class="term-panel-head">~<%= page.path.replace('index.html', '') %> <span class="term-muted">— cat</span></div>
+  <header class="article-header">
+    <h1 class="article-title"><%= page.title %></h1>
+    <div class="article-meta term-muted">
+      <time datetime="<%= date_xml(page.date) %>"><%= date(page.date, config.date_format) %></time>
+      <% if (page.categories && page.categories.length) { %>
+        · <%- list_categories(page.categories, { show_count: false, style: 'none', separator: ', ' }) %>
+      <% } %>
+      <% if (page.tags && page.tags.length) { %>
+        · <%- list_tags(page.tags, { show_count: false, style: 'none', separator: ', ' }) %>
+      <% } %>
+    </div>
+  </header>
+  <% if (theme.toc && toc(page.content, { list_number: false })) { %>
+    <aside class="article-toc">
+      <div class="article-toc-title">./toc</div>
+      <%- toc(page.content, { list_number: false, max_depth: 3 }) %>
+    </aside>
+  <% } %>
+  <div class="article-content">
+    <%- page.content %>
+  </div>
+</article>
+<nav class="post-nav">
+  <% if (page.prev) { %>
+    <a class="post-nav-link" href="<%= url_for(page.prev.path) %>">&lt; <%= page.prev.title %></a>
+  <% } else { %><span></span><% } %>
+  <% if (page.next) { %>
+    <a class="post-nav-link" href="<%= url_for(page.next.path) %>"><%= page.next.title %> &gt;</a>
+  <% } %>
+</nav>

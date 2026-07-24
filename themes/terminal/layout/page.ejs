@@ -1,0 +1,25 @@
+<% if (page.type === 'categories') { %>
+  <section class="term-panel">
+    <div class="term-panel-head">~/categories <span class="term-muted">— ls</span></div>
+    <div class="cloud-list">
+      <%- list_categories({ show_count: true, style: 'none', separator: '' }) %>
+    </div>
+  </section>
+<% } else if (page.type === 'tags') { %>
+  <section class="term-panel">
+    <div class="term-panel-head">~/tags <span class="term-muted">— ls</span></div>
+    <div class="cloud-list">
+      <%- list_tags({ show_count: true, style: 'none', separator: '' }) %>
+    </div>
+  </section>
+<% } else { %>
+  <article class="term-panel term-article">
+    <div class="term-panel-head">~/<%= page.path.replace('index.html', '') %> <span class="term-muted">— cat</span></div>
+    <header class="article-header">
+      <h1 class="article-title"><%= page.title %></h1>
+    </header>
+    <div class="article-content">
+      <%- page.content %>
+    </div>
+  </article>
+<% } %>

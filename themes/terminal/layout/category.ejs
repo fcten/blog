@@ -1,0 +1,5 @@
+<section class="term-panel">
+  <div class="term-panel-head">~/categories/<%= page.category %> <span class="term-muted">— ls</span></div>
+  <%- partial('partial/post-list', { posts: page.posts }) %>
+  <%- partial('partial/paginator') %>
+</section>

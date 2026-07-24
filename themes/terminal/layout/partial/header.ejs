@@ -1,0 +1,24 @@
+<header class="term-header">
+  <div class="term-titlebar">
+    <span class="term-dots" aria-hidden="true">
+      <span class="term-dot term-dot--close"></span>
+      <span class="term-dot term-dot--min"></span>
+      <span class="term-dot term-dot--max"></span>
+    </span>
+    <span class="term-titlebar-text"><%= theme.prompt.user %>@<%= theme.prompt.host %>: ~</span>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="切换浅色/暗色模式" title="切换浅色/暗色模式">[theme]</button>
+  </div>
+  <div class="term-hero">
+    <a class="term-brand" href="<%= url_for('/') %>">
+      <span class="term-prompt">$</span> <%= config.title %><span class="term-cursor" aria-hidden="true"></span>
+    </a>
+    <% if (config.subtitle) { %>
+      <p class="term-subtitle"># <%= config.subtitle %></p>
+    <% } %>
+  </div>
+  <nav class="term-nav" aria-label="主导航">
+    <% for (var name in theme.menu) { %>
+      <a class="term-nav-link<%= is_current(theme.menu[name]) ? ' is-active' : '' %>" href="<%= url_for(theme.menu[name]) %>">./<%= name %></a>
+    <% } %>
+  </nav>
+</header>

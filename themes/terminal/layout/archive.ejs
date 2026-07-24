@@ -1,0 +1,18 @@
+<section class="term-panel">
+  <div class="term-panel-head">~/archives <span class="term-muted">— ls -R</span></div>
+  <%
+    var lastYear = null;
+    page.posts.each(function (post) {
+      var y = date(post.date, 'YYYY');
+      if (y !== lastYear) {
+        lastYear = y;
+  %>
+    <h2 class="archive-year"><span class="term-prompt">></span> <%= y %></h2>
+  <% } %>
+    <div class="archive-item">
+      <time class="post-date" datetime="<%= date_xml(post.date) %>"><%= date(post.date, 'MM-DD') %></time>
+      <a class="post-link" href="<%= url_for(post.path) %>"><%= post.title %></a>
+    </div>
+  <% }) %>
+  <%- partial('partial/paginator') %>
+</section>

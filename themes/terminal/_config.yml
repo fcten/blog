@@ -1,0 +1,25 @@
+# Theme: terminal
+# 终端/科技风格主题配置
+
+# 导航菜单
+menu:
+  首页: /
+  归档: /archives/
+  分类: /categories/
+  标签: /tags/
+  关于: /about/
+
+# 终端提示符中的 用户@主机
+prompt:
+  user: fcten
+  host: blog
+
+# 文章列表摘要长度（字符数，0 表示不显示摘要）
+excerpt_length: 140
+
+# 文章页是否显示目录（需要文章内有标题）
+toc: true
+
+# 页脚
+footer:
+  since: 2019

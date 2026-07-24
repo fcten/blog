@@ -1,0 +1,23 @@
+<%
+  var pageTitle = page.title ? page.title + ' | ' + config.title : config.title;
+  if (is_archive()) pageTitle = '归档 | ' + config.title;
+  var description = page.description || config.description || '';
+%>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="<%= strip_html(description) %>">
+  <meta name="author" content="<%= config.author %>">
+  <title><%= pageTitle %></title>
+  <link rel="icon" href="<%= url_for('favicon.ico') %>">
+  <link rel="stylesheet" href="<%= url_for('css/style.css') %>">
+  <script>
+    // 首屏渲染前确定主题，避免闪烁
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('terminal-theme'); } catch (e) {}
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
