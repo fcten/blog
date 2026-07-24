@@ -4,7 +4,9 @@
       <span class="term-prompt">$</span>
       <div class="post-entry">
         <a class="post-link" href="<%= url_for(post.path) %>"><%= post.title %></a>
-        <time class="post-date" datetime="<%= date_xml(post.date) %>"><%= date(post.date, config.date_format) %></time>
+        <% if (!locals.hideDate) { %>
+          <time class="post-date" datetime="<%= date_xml(post.date) %>"><%= date(post.date, config.date_format) %></time>
+        <% } %>
         <% if (theme.excerpt_length > 0 && post.excerpt) { %>
           <p class="post-excerpt"><%= truncate(strip_html(post.excerpt), { length: theme.excerpt_length }) %></p>
         <% } %>

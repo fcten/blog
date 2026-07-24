@@ -1,5 +1,5 @@
 <section class="term-panel">
   <div class="term-panel-head">~/posts <span class="term-muted">— ls -lt</span></div>
-  <%- partial('partial/post-list', { posts: page.posts }) %>
+  <%- partial('partial/post-list', { posts: page.posts, hideDate: true }) %>
   <%- partial('partial/paginator') %>
 </section>
