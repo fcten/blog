@@ -25,6 +25,23 @@
         applyTheme(currentTheme() === 'dark' ? 'light' : 'dark');
       });
     }
+
+    // 联系邮箱仅在用户主动点击后解码，避免在静态 HTML 中暴露明文地址
+    var emailButton = document.querySelector('[data-contact-email]');
+    if (emailButton) {
+      emailButton.addEventListener('click', function () {
+        var key = 73;
+        var encoded = [47, 42, 61, 44, 39, 9, 37, 32, 63, 44, 103, 42, 38, 36];
+        var address = encoded.map(function (value) {
+          return String.fromCharCode(value ^ key);
+        }).join('');
+        var link = document.createElement('a');
+        link.href = 'mai' + 'lto:' + address;
+        link.textContent = address;
+        link.setAttribute('aria-label', '发送邮件至 ' + address);
+        emailButton.replaceWith(link);
+      }, { once: true });
+    }
   });
 
   // 正文图片点击预览（lightbox：缩放 / 拖动 / 前后切换 / 开关动画）

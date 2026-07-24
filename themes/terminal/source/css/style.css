@@ -420,6 +420,47 @@ a:hover {
 
 .article-content blockquote p { margin: 0.3rem 0; }
 
+.about-icon-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.about-icon {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.4em;
+  vertical-align: -0.15em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  color: var(--accent);
+}
+
+.contact-email-reveal {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--link);
+  font: inherit;
+  cursor: pointer;
+}
+
+.contact-email-reveal:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contact-email-reveal:focus-visible {
+  outline: 1px dashed var(--accent);
+  outline-offset: 3px;
+}
+
 .article-content hr {
   border: none;
   border-top: 1px dashed var(--border);
