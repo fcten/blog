@@ -1,3 +1,8 @@
+<%
+  const articleStatsConfig = theme.article_stats || {};
+  const showArticleStats = articleStatsConfig.enable === true && page.article_stats !== false;
+  const stats = showArticleStats ? article_stats(page.content, articleStatsConfig) : null;
+%>
 <article class="term-panel term-article">
   <div class="term-panel-head">~<%= page.path.replace('index.html', '') %> <span class="term-muted">— cat</span></div>
   <header class="article-header">
@@ -6,6 +11,13 @@
       <time datetime="<%= date_xml(page.date) %>"><%= date(page.date, config.date_format) %></time>
       <% if (page.categories && page.categories.length) { %>
         · <%- list_categories(page.categories, { show_count: false, style: 'none', separator: ', ' }) %>
+      <% } %>
+      <% if (stats && stats.total > 0) { %>
+        · <span class="article-stats" aria-label="文章阅读信息">
+          <span>字数 <%= stats.formattedTotal %></span>
+          <span aria-hidden="true">·</span>
+          <span>预计阅读 <%= stats.minutes %> 分钟</span>
+        </span>
       <% } %>
       <% if (page.tags && page.tags.length) { %>
         · <%- list_tags(page.tags, { show_count: false, style: 'none', separator: ', ' }) %>

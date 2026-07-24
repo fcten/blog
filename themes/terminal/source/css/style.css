@@ -354,6 +354,10 @@ a:hover {
 .article-meta a { color: var(--muted); }
 .article-meta a:hover { color: var(--accent); }
 
+.article-stats {
+  white-space: nowrap;
+}
+
 .article-toc {
   border: 1px dashed var(--border);
   border-radius: 6px;

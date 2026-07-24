@@ -21,6 +21,13 @@ excerpt_length: 140
 # 文章页是否显示目录（需要文章内有标题）
 toc: true
 
+# 文章页字数与预计阅读时间
+# 单篇文章可在 Front Matter 中设置 article_stats: false 关闭
+article_stats:
+  enable: true
+  cjk_characters_per_minute: 300
+  words_per_minute: 200
+
 # 页脚
 footer:
   since: 2019
