@@ -280,7 +280,21 @@ a:hover {
 }
 
 .archive-item {
+  display: flex;
+  align-items: baseline;
+  column-gap: 0.75rem;
   padding: 0.2rem 0 0.2rem 1.25rem;
+}
+
+.archive-item .post-date {
+  flex: 0 0 auto;
+  margin-top: 0;
+  white-space: nowrap;
+}
+
+.archive-item .post-link {
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 /* ---------- 分类 / 标签云 ---------- */
@@ -742,7 +756,12 @@ figure.highlight .marked {
     border: none;
     border-radius: 0;
     min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
   }
+  /* 内容不足一屏时把页脚推到底部，避免下方留白露出外壳背景 */
+  .term-main { flex: 1 0 auto; }
 }
 
 @media (max-width: 600px) {
