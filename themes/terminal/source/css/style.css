@@ -262,22 +262,6 @@ a:hover {
   font-size: 0.82rem;
 }
 
-.post-list .post-date::before {
-  content: "[";
-  color: var(--fg);
-  opacity: 0.4;
-  margin-right: 0.15rem;
-  user-select: none;
-}
-
-.post-list .post-date::after {
-  content: "]";
-  color: var(--fg);
-  opacity: 0.4;
-  margin-left: 0.15rem;
-  user-select: none;
-}
-
 .post-link {
   color: var(--fg);
   font-weight: 600;
