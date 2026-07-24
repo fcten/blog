@@ -51,8 +51,9 @@ body {
   min-height: 100vh;
   background: var(--bg);
   color: var(--fg);
-  font-family: ui-monospace, "SF Mono", "Cascadia Code", "JetBrains Mono",
-    Menlo, Consolas, "Liberation Mono", "Noto Sans Mono CJK SC", monospace;
+  font-family: "SF Mono", "Cascadia Code", "JetBrains Mono", Menlo, Consolas,
+    "Liberation Mono", ui-monospace, "Sarasa Mono SC", "Maple Mono NF CN",
+    "Noto Sans Mono CJK SC", "Microsoft YaHei", monospace;
   font-size: 0.95rem;
   line-height: 1.75;
   transition: background 0.25s ease, color 0.25s ease;
