@@ -376,6 +376,7 @@ a:hover {
   height: auto;
   border: 1px solid var(--border);
   border-radius: 4px;
+  cursor: zoom-in;
 }
 
 .article-content blockquote {
@@ -602,6 +603,128 @@ figure.highlight .marked {
 
 .term-footer-meta a { color: var(--muted); }
 .term-footer-meta a:hover { color: var(--accent); }
+
+/* ---------- 图片预览（lightbox） ---------- */
+
+.img-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  cursor: zoom-out;
+}
+
+.img-lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.img-lightbox img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  transform-origin: center center;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-drag: none;
+  touch-action: none;
+}
+
+.img-lightbox img.is-dragging { cursor: grabbing; }
+
+/* 打开/关闭时的位移动画（JS 加 .is-animating，避免拖动时卡顿） */
+.img-lightbox img.is-animating { transition: transform 0.25s ease; }
+
+.img-lightbox-counter {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+  display: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 1.2rem;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+.img-lightbox.has-multiple .img-lightbox-counter { display: block; }
+
+.img-lightbox-toolbar {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.img-lightbox-toolbar button,
+.img-lightbox-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: background 0.15s ease;
+}
+
+.img-lightbox-toolbar button:hover,
+.img-lightbox-nav:hover { background: rgba(0, 0, 0, 0.7); }
+
+.img-lightbox-toolbar button svg,
+.img-lightbox-nav svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.img-lightbox-nav {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: 2.5rem;
+  height: 2.5rem;
+  transform: translateY(-50%);
+  display: none;
+}
+
+.img-lightbox.has-multiple .img-lightbox-nav { display: flex; }
+
+.img-lightbox-prev { left: 1rem; }
+.img-lightbox-next { right: 1rem; }
+
+.img-lightbox-scale {
+  min-width: 3.2rem;
+  padding: 0.4rem 0.5rem;
+  border-radius: 1.2rem;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: #fff;
+  font-size: 0.85rem;
+  text-align: center;
+}
 
 /* ---------- 响应式 ---------- */
 
