@@ -1,5 +1,5 @@
 ---
-title: GLM 5.2 与 Kimi K3：长时程 Agent 的技术设计
+title: GLM 5.2 与 Kimi K3：面向长时程 Agent 任务优化的开放前沿模型
 date: 2026-07-30 19:57:54
 tags:
 - AI
